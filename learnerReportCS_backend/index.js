@@ -7,7 +7,7 @@ const cookieParser = require("cookie-parser");
 const mongoose = require("mongoose");
 const cors = require("cors");
 // require("dotenv").config();
-require("dotenv").config({ path: "config.env" });
+require("dotenv").config({ path: "process.env" });
 
 const studentRoutes = require("./routes/student.routes");
 const adminRoutes = require("./routes/admin.routes");
