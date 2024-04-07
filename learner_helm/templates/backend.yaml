@@ -17,9 +17,6 @@ spec:
         - name: {{ .Values.deployments.backendname }}
           image: "{{ .Values.image.backend.repository }}/{{ .Values.image.backend.name }}:{{ .Values.image.backend.tag }}"
           resources:
-            limits:
-              memory: {{ .Values.resources.memory }}
-              cpu: {{ .Values.resources.cpu }}
           ports:
             - containerPort: {{ .Values.image.backend.port }}
 

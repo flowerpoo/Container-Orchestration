@@ -13,12 +13,9 @@ spec:
         app: backend
     spec:
       containers:
-      - name: backend
-        image: flowerking21/learnersreport_backend:latest
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
-        ports:
-        - containerPort: 4200
-        imagePullPolicy: Always
+        - name: backend
+          image: flowerking21/learnersreport_backend:latest
+          resource:
+          ports:
+            - containerPort: 4200
+              

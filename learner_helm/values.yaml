@@ -1,6 +1,7 @@
 deployments: 
   backendname: backend
   frontendname: frontend 
+  
 image:
   backend:
     repository: flowerking21
@@ -14,9 +15,9 @@ image:
     port: 3000
    
 
-resources:
-  cpu: 500m
-  memory: 128MI 
+# resources:
+#   cpu: 500m
+#   memory: 128MI 
 
 services:
   backendname: backend-service
