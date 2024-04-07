@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.deployments.frontendname }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Values.deployments.frontendname }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.deployments.frontendname }}
+    spec:
+      containers:
+      - name: {{ .Values.deployments.frontendname }}
+        image:  "{{ .Values.image.frontend.repository }}/{{ .Values.image.frontend.name }}:{{ .Values.image.frontend.tag }}"
+        resources:
+          limits:
+            memory: {{ .Values.resources.memory }}
+            cpu: {{ .Values.resources.cpu }}
+        ports:
+        - containerPort: {{ .Values.image.frontend.port }}
