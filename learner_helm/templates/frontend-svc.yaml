@@ -3,9 +3,9 @@ kind: Service
 metadata:
   name: {{ .Values.services.frontendname }}
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: {{ .Values.deployments.frontendname }}
   ports:
-  - port: {{ .Values.image.frontend.Port }}
+  - port: {{ .Values.image.frontend.port }}
     targetPort: {{ .Values.image.frontend.port }}
