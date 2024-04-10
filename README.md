@@ -64,3 +64,15 @@ helm install learnerreport learner_helm
 ![alt text](helm_install.PNG)
 
 # Jenkins Automation 
+
+* Created new EC2 instance with jenkins, docker, kubernetes, helm, git awscli everything instance.
+* once jenkins grt ready it will run in port 8080
+```
+EC2_instance_public_ip:8080
+```
+* Go to Credencials and added your aws, docker credencials.
+* Then created the pipeline Jenkins file are updated above.
+* Clone th ecode, build the docker image pushed that into repo, then created EKS cluster deploy the helm chart there.
+* congrats your done with helm deployment
+
+Happy Learning !!!!!!
